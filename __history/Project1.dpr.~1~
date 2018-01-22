@@ -17,12 +17,13 @@ var P2F:TP2F;
  var count:integer;
   begin
   count:=0;
-   if     (P2F[x-1,y]='K') or (P2F[x,y-1]='K') or (P2F[x-1,y-1]='K')
-      and (P2F[x+1,y]='K') or (P2F[x,y+1]='K') or (P2F[x+1,y+1]='K')
-      and (P2F[x+1,y-1]='K')or (P2F[x-1,y+1]='K')  then
+   if     (P2F[x-1,y]='K') and (P2F[x,y-1]='K') and (P2F[x-1,y-1]='K')
+      and (P2F[x+1,y]='K') and (P2F[x,y+1]='K') and (P2F[x+1,y+1]='K')
+      and (P2F[x+1,y-1]='K')and (P2F[x-1,y+1]='K')  then
    inc(count);
    if count<=2 then
    Quick_math:=true;
+
  end;
  begin
  n:=10;
